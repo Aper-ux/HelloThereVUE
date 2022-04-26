@@ -28,7 +28,29 @@
           message: "Hello there!",
           count: 0,
           name: '',
-          edad: 0
+          edad: 0,
+          lenguajes: ['C', 'C++', 'C#', 'Java', 'Ruby', 'Kotlin', 'JavaScript', 'Python'],
+          articulos: [{
+                    codigo: 1, 
+                    descripcion: 'papas',
+                    precio: 12.52
+                   },{
+                    codigo: 2, 
+                    descripcion: 'naranjas',
+                    precio: 21
+                   },{
+                    codigo: 3, 
+                    descripcion: 'peras',
+                    precio: 18.20
+                   }],
+          actividad: '',
+          actividades: []
+        }
+      },
+      methods: {
+        actualizarLista: function() {
+          this.actividades.push(this.actividad);
+          this.actividad = '';
         }
       }
     }).mount('#app')
@@ -50,7 +72,45 @@
     <h1>Ingrese su edad:</h1>
     <input type="number" v-model="edad" class="form-control" style="width: 10%;"></p>
     <h4 v-if="edad>=18">Es mayor de edad</h4>
-    <h4 v-if="edad<18">Es menor de edad</h4>
+    <h4 v-else-if="edad<18">Es menor de edad</h4>
+    <h4 v-if="edad<0">Introduzca una edad valida</h4>
+    <p v-else>Es 0</p>
+
+    <h1>--------------------------------------------</h1>
+    <ul>
+      <li v-for="lenguaje in lenguajes">{{ lenguaje }}</li>
+    </ul>
+
+    <h1>--------------------------------------------</h1>
+    <article style="width: 50%;">
+    <table class="table table-dark border-light table-hover" style="background-color: rgba(201, 206, 250, 0.849); border-radius: 2%;">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template v-for="articulo in articulos">
+        <tr>
+          <td>{{ articulo.codigo }}</td>
+          <td>{{ articulo.descripcion }}</td>
+          <td>{{ articulo.precio }}</td>
+        </tr>
+        </template>
+      </tbody>
+    </table>
+    </article>
+
+    <h1>--------------------------------------------</h1>
+    <ol>
+      <li v-for="actividad in actividades">
+        {{ actividad }}
+      </li>
+    </ol>
+    <h5>Nueva actividad:</h5>
+    <input type="text" v-on:keyup.enter="actualizarLista" v-model="actividad" placeholder="Enter para confirmar"  class="form-control" style="width: 30%;">
   </div>
 </body>
 </html>
