@@ -5,18 +5,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body>
-  <div id="aplicacion">{{mensaje}}</div>
-  
-  <script src="https://unpkg.com/vue@3"></script>   
 
-  <script>
-  var app = new Vue({
-    el:'#aplicacion',
-    data:{
-      mensaje: 'hola mundo Vue'
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
     }
-  })
-</script>
+  }
+</script>   
+
+
+<body>
+  <div id="app">{{ message }}</div>
+
+  <script type="module">
+    import { createApp } from 'vue'
+    createApp({
+      data(){
+        return{
+          message: "Hello there!"
+        }
+      }
+    }).mount('#app')
+  </script>
 </body>
 </html>
