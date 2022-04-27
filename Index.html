@@ -111,6 +111,107 @@
     </ol>
     <h5>Nueva actividad:</h5>
     <input type="text" v-on:keyup.enter="actualizarLista" v-model="actividad" placeholder="Enter para confirmar"  class="form-control" style="width: 30%;">
+  
+    <article style="display: flex; flex-direction: column;">
+      <article style="display: flex; flex-direction: row; justify-content: space-around; margin-bottom: 5%; margin-top: 5%;">
+      <template v-for="articulo in articulos">
+      <div class="card" style="width: 23rem;">
+      <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">{{ articulo.codigo }}</h5>
+              <p class="card-text">{{ articulo.codigo }}</p>
+              <a href="#" class="btn btn-primary">{{ articulo.codigo }}</a>
+          </div>
+      </div> 
+      </template>
+      </article>
+  </article>
+
+  <article style="display: flex; flex-direction: column;">
+      <template v-for="articulo in articulos">
+      <article style="display: flex; flex-direction: row; justify-content: space-around; margin-bottom: 5%; margin-top: 5%;">
+          <div class="card" style="width: 23rem;">
+          <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">{{ articulo.codigo }}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+          </div> 
+          <div class="card" style="width: 23rem;">
+          <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">{{ articulo.descripcion }}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+          </div>
+          <div class="card" style="width: 23rem;">
+          <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">{{ articulo.precio }}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+          </div> 
+      </article>
+      </template>
+  </article>
   </div>
+
+  <article style="display: flex; flex-direction: column;">
+    <article style="display: flex; flex-direction: row; justify-content: space-around; margin-bottom: 5%; margin-top: 5%;">
+        <div class="card" style="width: 23rem;">
+        <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> 
+        <div class="card" style="width: 23rem;">
+        <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 23rem;">
+        <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> 
+    </article>
+    <article style="display: flex; flex-direction: row; justify-content: space-around;">
+        <div class="card" style="width: 23rem;">
+        <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> 
+        <div class="card" style="width: 23rem;">
+        <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 23rem;">
+        <img src="https://www.campustraining.es/wp-content/uploads/2020/12/funciones-fotografo-profesional-715x495.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> 
+    </article>
+  </article>
 </body>
 </html>
